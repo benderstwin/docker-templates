@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>telegraf</Name>
+  <Name>telegraf-snmp</Name>
   <Repository>telegraf:alpine</Repository>
   <Registry>https://hub.docker.com/bender77/r/telegraf-snmp</Registry>
   <Network>host</Network>
