@@ -97,6 +97,10 @@
       <ContainerDir>/etc/telegraf/telegraf.conf</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
+	<Volume>
+		<HostDir>/mnt/user/appdata/telegraf/mibs</HostDir>
+		<ContainerDir>/etc/telegraf/mibs</ContainerDir>
+	</Volume>
   </Data>
   <Environment>
     <Variable>
