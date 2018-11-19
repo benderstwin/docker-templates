@@ -38,7 +38,7 @@
   <Data>
     <Volume>
       <HostDir></HostDir>
-      <ContainerDir>/app</ContainerDir>
+      <ContainerDir>/appdir</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     </Data>
