@@ -118,12 +118,7 @@
       <Name>HOST_ETC</Name>
       <Mode/>
     </Variable>
-    <Variable>
-      <Value>/rootfs</Value>
-      <Name>HOST_MOUNT_PREFIX</Name>
-      <Mode/>
-    </Variable>
-  </Environment>
+    </Environment>
   <Config Name="Host Path 1" Target="/var/run/utmp" Default="/var/run/utmp" Mode="ro" Description="Container Path: /var/run/utmp" Type="Path" Display="always" Required="true" Mask="false">/var/run/utmp</Config>
   <Config Name="Host Path 2" Target="/var/run/docker.sock" Default="/var/run/docker.sock" Mode="ro" Description="Container Path: /var/run/docker.sock" Type="Path" Display="always" Required="true" Mask="false">/var/run/docker.sock</Config>
   <Config Name="Host Path 3" Target="/rootfs" Default="/" Mode="ro" Description="Container Path: /rootfs" Type="Path" Display="always" Required="true" Mask="false">/</Config>
@@ -131,6 +126,7 @@
   <Config Name="Host Path 5" Target="/rootfs/etc" Default="/etc" Mode="ro" Description="Container Path: /rootfs/etc" Type="Path" Display="always" Required="true" Mask="false">/etc</Config>
   <Config Name="Host Path 6" Target="/rootfs/proc" Default="/proc" Mode="ro" Description="Container Path: /rootfs/proc" Type="Path" Display="always" Required="true" Mask="false">/proc</Config>
   <Config Name="Host Path 7" Target="/etc/telegraf/telegraf.conf" Default="/mnt/user/appdata/telegraf/telegraf.conf" Mode="rw" Description="Container Path: /etc/telegraf/telegraf.conf" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/telegraf/telegraf.conf</Config>
+  <Config Name="Host Path 7" Target="/etc/telegraf/mibs" Default="/mnt/user/appdata/telegraf/mibs" Mode="rw" Description="Container Path: /etc/telegraf/mibs" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/telegraf/mibs</Config>
   <Config Name="Key 1" Target="HOST_PROC" Default="/rootfs/proc" Mode="" Description="Container Variable: HOST_PROC" Type="Variable" Display="always" Required="false" Mask="false">/rootfs/proc</Config>
   <Config Name="Key 2" Target="HOST_SYS" Default="/rootfs/sys" Mode="" Description="Container Variable: HOST_SYS" Type="Variable" Display="always" Required="false" Mask="false">/rootfs/sys</Config>
   <Config Name="Key 3" Target="HOST_ETC" Default="/rootfs/etc" Mode="" Description="Container Variable: HOST_ETC" Type="Variable" Display="always" Required="false" Mask="false">/rootfs/etc</Config>
