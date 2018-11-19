@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Container>
-  <TemplateURL>https://raw.githubusercontent.com/benderstwin/Python3-Scripts-Unraid/master/python3collector.xml</TemplateURL>
+  <TemplateURL>https://github.com/benderstwin/docker-templates/blob/master/bender77/python3collector.xml</TemplateURL>
 <Beta>True</Beta>
 <Category>Monitor: Network:Other</Category>
 <Date>2018-11-08</Date>
@@ -20,7 +20,7 @@
   <Privileged>false</Privileged>
   <Overview>Python3 container for executing various scripts.  Includes Python-Cron </Overview>
   <WebUI>http://[IP]:[PORT:8675309]/</WebUI>
-  <Icon>https://raw.githubusercontent.com/benderstwin/Python3-Scripts-Unraid/master/Python.png</Icon>
+  <Icon>https://github.com/benderstwin/docker-templates/blob/master/bender77/images/Python.png</Icon>
   <Description>Container Description Goes Here [br]&#xD;
   [br][br][b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]&#xD;
   [b]/config[/b] : Requirements for pip[br]&#xD;
