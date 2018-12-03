@@ -134,7 +134,7 @@ traefik.frontend.auth.basic.usersFile=/shared/.htpasswd #optional: set this labe
     </Label>
     <Label>
       <Value>/shared/.htpasswd</Value>
-      <Name>traefik.frontend.auth.basic.userFile</Name>
+      <Name>traefik.frontend.auth.basic.usersFile</Name>
       <Mode/>
     </Label>
     <Label>
@@ -193,7 +193,7 @@ traefik.frontend.auth.basic.usersFile=/shared/.htpasswd #optional: set this labe
   <Config Name="Traefik frontend host" Target="traefik.frontend.rule" Default="Host:traefik.domain.fun" Mode="" Description="Only use one fromtend rule.  This one is for using subdomains instead of subfolders.  &#13;&#10;&#13;&#10;YOU MUST REMOVE THIS RULE TO USE SUB FOLDERS." Type="Label" Display="always" Required="false" Mask="false">Host:traefik.domain.fun</Config>
   <Config Name="Traefik frontend host" Target="traefik.frontend.rule" Default="Host:traefik.domain.fun; PathPrefixStrip: /traefik" Mode="" Description="Only use one fromtend rule.  This one is for using subdirectories instead of subdomains.  &#13;&#10;&#13;&#10;YOU MUST REMOVE THIS RULE TO USE SUB DOMAINS." Type="Label" Display="always" Required="false" Mask="false">Host:traefik.domain.fun; PathPrefixStrip: /traefik</Config>
   <Config Name="Container port" Target="traefik.port" Default="8080" Mode="" Description="What port does your container listen on?" Type="Label" Display="always" Required="false" Mask="false">8080</Config>
-  <Config Name="Http Auth" Target="traefik.frontend.auth.basic.userFile" Default="/shared/.htpasswd" Mode="" Description="path to your .htpasswd file.  OPTIONAL.  Delete this label if you dont want to use http authentication (not recommended if public facing)&#13;&#10;&#13;&#10;you can generate the encrypted password here: http://www.htaccesstools.com/htpasswd-generator/&#13;&#10;&#13;&#10;Copy output to .htpasswd" Type="Label" Display="always" Required="false" Mask="false">/shared/.htpasswd</Config>
+  <Config Name="Http Auth" Target="traefik.frontend.auth.basic.usersFile" Default="/shared/.htpasswd" Mode="" Description="path to your .htpasswd file.  OPTIONAL.  Delete this label if you dont want to use http authentication (not recommended if public facing)&#13;&#10;&#13;&#10;you can generate the encrypted password here: http://www.htaccesstools.com/htpasswd-generator/&#13;&#10;&#13;&#10;Copy output to .htpasswd" Type="Label" Display="always" Required="false" Mask="false">/shared/.htpasswd</Config>
   <Config Name="Docker Network" Target="traefik.docker.network" Default="bridge" Mode="" Description="connect to default bridge network.  " Type="Label" Display="advanced" Required="true" Mask="false">bridge</Config>
   <Config Name="traefik.frontend.headers.SSLRedirect" Target="traefik.frontend.headers.SSLRedirect" Default="true" Mode="" Description="redirect http to https" Type="Label" Display="advanced" Required="true" Mask="false">true</Config>
   <Config Name="traefik.frontend.headers.STSSeconds" Target="traefik.frontend.headers.STSSeconds" Default="315360000" Mode="" Description="" Type="Label" Display="advanced" Required="true" Mask="false">traefik.frontend.headers.STSSeconds</Config>
