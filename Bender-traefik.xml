@@ -50,7 +50,28 @@ On the crypto tab in cloudflare&#xD;
 -enable SSL client authentication&#xD;
 -turn on SSL Full (strict)&#xD;
 &#xD;
-NOTE:  It is possible to use Traefik with ACME (Lets Encrypt).  This will require modification beyond the scope of this template (although you could modify the traefik.toml pretty easily to enable this).</Description>
+NOTE:  It is possible to use Traefik with ACME (Lets Encrypt).  This will require modification beyond the scope of this template (although you could modify the traefik.toml pretty easily to enable this).
+
+HOW TO PROXY OTHER APPS:&#xD;
+Traefik uses labels to decide what to proxy and where to send requests.
+Here are the labels available.  
+traefik.enable=true #required: add this label to the container you want to proxy
+traefik.backend=plexstats #name of the container required:(ie tautulli)
+traefik.frontend.rule=Host:plexstats.domain.fun required: (change to your subdomain and domain name)
+traefik.frontend.rule=Host:domain.fun; PathPrefix: /plexstats #optional: not needed unless using subfolders vs subdomains
+traefik.port=8181 #required: the port the container listens on
+traefik.docker.network=bridge #required
+traefik.frontend.headers.SSLRedirect=true #optional: redirect http to https, might as well use it
+traefik.frontend.headers.STSSeconds=315360000" #optional
+traefik.frontend.headers.browserXSSFilter=true" #optional
+traefik.frontend.headers.contentTypeNosniff=true" #optional
+traefik.frontend.headers.forceSTSHeader=true" #optional
+traefik.frontend.headers.SSLHost=domain.fun #required: set to your domain name
+traefik.frontend.headers.STSIncludeSubdomains=true #optional
+traefik.frontend.headers.STSPreload=true #optional
+traefik.frontend.headers.frameDeny=true #optional
+
+</Description>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
