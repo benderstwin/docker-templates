@@ -4,7 +4,6 @@
   <Repository>traefik:latest</Repository>
   <Registry>library/traefik - Docker Hub</Registry>
   <Network>bridge</Network>
-  <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
   <Support/>
