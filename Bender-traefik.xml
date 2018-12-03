@@ -35,7 +35,7 @@ traefik.backend=ombi  #required:name of the container Traefik should map to on t
 traefik.frontend.rule=Host:ombi.domain.com  #required/optional: Sets the subdomain rule.&#xD;
 traefik.frontend.rule=Host:domain.com; PathPrefixStrip: /ombi #optional for using subfolders&#xD;
 traefik.port=3579 #required:container port to send traffic to.  Source container port, not the mapping in unraid&#xD;
-traefik.frontend.auth.basic.usersFile=/shared/.htpasswd  ## This is what sets up the front end interface to use the generated .htaccess file.  Add this line to any site you want additional security on.&#xD;
+traefik.frontend.auth.basic.usersFile=/shared/.htpasswd  ## This is what sets up the front end interface to use the generated .htpasswd file.  Add this line to any site you want additional security on.&#xD;
 traefik.docker.network=bridge  #required: Specify the docker network&#xD;
 traefik.frontend.headers.SSLRedirect=true #optional but might as well if you are using SSL&#xD;
 traefik.frontend.headers.STSSeconds=315360000 #optional&#xD;
@@ -82,17 +82,17 @@ traefik.backend=ombi  #required:name of the container Traefik should map to on t
 traefik.frontend.rule=Host:ombi.domain.com  #required/optional: Sets the subdomain rule.&#xD;
 traefik.frontend.rule=Host:domain.com; PathPrefixStrip: /ombi #optional for using subfolders&#xD;
 traefik.port=3579 #required:container port to send traffic to.  Source container port, not the mapping in unraid&#xD;
-traefik.frontend.auth.basic.usersFile=/shared/.htpasswd  ## This is what sets up the front end interface to use the generated .htaccess file.  Add this line to any site you want additional security on.&#xD;
- traefik.docker.network=bridge  #required: Specify the docker network&#xD;
- traefik.frontend.headers.SSLRedirect=true #optional but might as well if you are using SSL&#xD;
- traefik.frontend.headers.STSSeconds=315360000 #optional&#xD;
- traefik.frontend.headers.browserXSSFilter=true #optional&#xD;
- traefik.frontend.headers.contentTypeNosniff=true #optional&#xD;
- traefik.frontend.headers.forceSTSHeader=true #may be required&#xD;
- traefik.frontend.headers.SSLHost=domain.com #required&#xD;
- traefik.frontend.headers.STSIncludeSubdomains=true #may be required&#xD;
- traefik.frontend.headers.STSPreload=true #optional&#xD;
- traefik.frontend.headers.frameDeny=true #optional</Description>
+traefik.frontend.auth.basic.usersFile=/shared/.htpasswd  ## This is what sets up the front end interface to use the generated .htpasswd file.  Add this line to any site you want additional security on.&#xD;
+traefik.docker.network=bridge  #required: Specify the docker network&#xD;
+traefik.frontend.headers.SSLRedirect=true #optional but might as well if you are using SSL&#xD;
+traefik.frontend.headers.STSSeconds=315360000 #optional&#xD;
+traefik.frontend.headers.browserXSSFilter=true #optional&#xD;
+traefik.frontend.headers.contentTypeNosniff=true #optional&#xD;
+traefik.frontend.headers.forceSTSHeader=true #may be required&#xD;
+traefik.frontend.headers.SSLHost=domain.com #required&#xD;
+traefik.frontend.headers.STSIncludeSubdomains=true #may be required&#xD;
+traefik.frontend.headers.STSPreload=true #optional&#xD;
+traefik.frontend.headers.frameDeny=true #optional</Description>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
