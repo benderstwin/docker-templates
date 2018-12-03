@@ -62,10 +62,10 @@ traefik.frontend.rule=Host:domain.fun; PathPrefix: /plexstats #optional: not nee
 traefik.port=8181 #required: the port the container listens on&#xD;
 traefik.docker.network=bridge #required&#xD;
 traefik.frontend.headers.SSLRedirect=true #optional: redirect http to https, might as well use it&#xD;
-traefik.frontend.headers.STSSeconds=315360000" #optional&#xD;
-traefik.frontend.headers.browserXSSFilter=true" #optional&#xD;
-traefik.frontend.headers.contentTypeNosniff=true" #optional&#xD;
-traefik.frontend.headers.forceSTSHeader=true" #optional&#xD;
+traefik.frontend.headers.STSSeconds=315360000 #optional&#xD;
+traefik.frontend.headers.browserXSSFilter=true #optional&#xD;
+traefik.frontend.headers.contentTypeNosniff=true #optional&#xD;
+traefik.frontend.headers.forceSTSHeader=true #optional&#xD;
 traefik.frontend.headers.SSLHost=domain.fun #required: set to your domain name&#xD;
 traefik.frontend.headers.STSIncludeSubdomains=true #optional&#xD;
 traefik.frontend.headers.STSPreload=true #optional&#xD;
@@ -148,7 +148,7 @@ traefik.frontend.auth.basic.usersFile=/shared/.htpasswd #optional: set this labe
       <Mode/>
     </Label>
     <Label>
-      <Value>traefik.frontend.headers.STSSeconds</Value>
+      <Value>315360000</Value>
       <Name>traefik.frontend.headers.STSSeconds</Name>
       <Mode/>
     </Label>
