@@ -70,6 +70,7 @@ traefik.frontend.headers.SSLHost=domain.fun #required: set to your domain name&#
 traefik.frontend.headers.STSIncludeSubdomains=true #optional&#xD;
 traefik.frontend.headers.STSPreload=true #optional&#xD;
 traefik.frontend.headers.frameDeny=true #optional&#xD;
+traefik.frontend.auth.basic.usersFile=/shared/.htpasswd #optional: set this label to user the /shared/.htpasswd for basic auth
 
 </Description>
   <Networking>
