@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>HAdashboard</Name>
+  <Repository>acockburn/appdaemon</Repository>
+  <Registry/>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://www.home-assistant.io</Support>
+  <Project/>
+  <Overview>HA Dashboard for Home Assistant.  Template for Unraid.  You must add a password to your HA configuration as the Dashboard requires it.  Edit the configuration.yml for home assistant and add the lines:&#xD;
+&#xD;
+http:&#xD;
+  api_password: yourpasswordgoeshere</Overview>
+  <Category>HomeAutomation: Tools:</Category>
+  <WebUI>http://127.0.0.1:5050</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/benderstwin/docker-templates/master/HA-Dashboard.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/benderstwin/docker-templates/master/images/favicon-192x192-full.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1551824826</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>HA Dashboard for Home Assistant.  Template for Unraid.  You must add a password to your HA configuration as the Dashboard requires it.  Edit the configuration.yml for home assistant and add the lines:&#xD;
+&#xD;
+http:&#xD;
+  api_password: yourtokenpass</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>5050</HostPort>
+        <ContainerPort>5050</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/hadashboard</HostDir>
+      <ContainerDir>/conf</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>http://unraidip:8123</Value>
+      <Name>HA_URL</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>yourtokenpass</Value>
+      <Name>TOKEN</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>http://unraidip:5050</Value>
+      <Name>DASH_URL</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="config" Target="/conf" Default="/mnt/user/appdata/hadashboard" Mode="rw" Description="Container Path: /conf" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/hadashboard</Config>
+  <Config Name="HA_URL" Target="HA_URL" Default="http://unraidip:8123" Mode="" Description="Container Variable: HA_URL" Type="Variable" Display="always" Required="true" Mask="false">http://unraidip:8123</Config>
+  <Config Name="TOKEN - Set in configuration.yml for HA" Target="TOKEN" Default="yourtokenpass" Mode="" Description="Container Variable: TOKEN" Type="Variable" Display="always" Required="true" Mask="true">yourtokenpass</Config>
+  <Config Name="DASH_URL" Target="DASH_URL" Default="" Mode="" Description="Container Variable: DASH_URL" Type="Variable" Display="always" Required="false" Mask="false">http://unraidip:5050</Config>
+  <Config Name="5050 - WEBUI" Target="5050" Default="" Mode="tcp" Description="Container Port: 5050" Type="Port" Display="always" Required="true" Mask="false">5050</Config>
+</Container>
