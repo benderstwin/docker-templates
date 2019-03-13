@@ -7,19 +7,19 @@
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support/>
-  <Project/>
+  <Support>https://github.com/Boerderij/Varken</Support>
+  <Project>https://github.com/Boerderij/Varken</Project>
   <Overview>Varken requires influxdb and grafana.  Deploy those containers first.&#xD;
 &#xD;
 You must edit the varken.ini file in /mnt/user/appdata/varken.  </Overview>
   <Category>Tools: Network:Management</Category>
   <WebUI>isnt one</WebUI>
-  <TemplateURL>mytemplaturl</TemplateURL>
-  <Icon>iconurl</Icon>
+  <TemplateURL>https://github.com/benderstwin/docker-templates/blob/master/Bender-Varken.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/benderstwin/docker-templates/master/images/varken.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1552510697</DateInstalled>
+  <DateInstalled>1552512030</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Description>Varken requires influxdb and grafana.  Deploy those containers first.&#xD;
