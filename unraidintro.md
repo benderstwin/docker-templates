@@ -1,4 +1,5 @@
 Unraid is easy, and freaking rock solid. Just takes a bit to learn your way around, and how to deploy the containers, but once you get it is so simple. Unraid itself couldnt be easier to set up. 
+
 -Set up your flash drive using the instructions
 -Hook up all of your drives
 -Boot to flash drive. 
