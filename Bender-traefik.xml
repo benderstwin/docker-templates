@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>traefik</Name>
-  <Repository>traefik:latest</Repository>
+  <Repository>traefik:v1.7</Repository>
   <Registry>library/traefik - Docker Hub</Registry>
   <Network>bridge</Network>
   <Shell>sh</Shell>
@@ -46,7 +46,7 @@ traefik.frontend.headers.STSIncludeSubdomains=true #may be required&#xD;
 traefik.frontend.headers.STSPreload=true #optional&#xD;
 traefik.frontend.headers.frameDeny=true #optional</Overview>
   <Category>Network:Web Network:Proxy</Category>
-  <WebUI>http://127.0.0.1:8080</WebUI>
+  <WebUI>http://[IP]:[PORT:8080]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/benderstwin/docker-templates/master/Bender-traefik.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/benderstwin/docker-templates/master/images/traefik.png</Icon>
   <ExtraParams/>
