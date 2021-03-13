@@ -14,7 +14,7 @@
 http:&#xD;
   api_password: yourpasswordgoeshere</Overview>
   <Category>HomeAutomation: Tools:</Category>
-  <WebUI>http://127.0.0.1:5050</WebUI>
+  <WebUI>http://[IP]:[PORT:5050]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/benderstwin/docker-templates/master/HA-Dashboard.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/benderstwin/docker-templates/master/images/favicon-192x192-full.png</Icon>
   <ExtraParams/>
